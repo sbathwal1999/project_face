@@ -23,7 +23,6 @@ def detect_face(img, detector_backend = 'retinaface', grayscale = False, enforce
   #this call should be completed very fast because it will return found in memory
   #it will not build face detector model in each call (consider for loops)
   face_detector = face_detector_build_model(detector_backend)
-  print(face_detector)
 
   try:
     detected_face, img_region = face_detector_detect_face(face_detector, detector_backend, img, align)
